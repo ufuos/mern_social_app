@@ -1,14 +1,42 @@
-// Update this page (the content is just a fallback if you fail to update the page)
 
-const Index = () => {
+import Navbar from "@/components/Navbar";
+import PostCard from "@/components/PostCard";
+
+const DUMMY_POSTS = [
+  {
+    name: "Alice Wang",
+    username: "alicew",
+    content: "Welcome to SocialConnect! 👋 Excited to share my first post.",
+    avatar: "https://randomuser.me/api/portraits/women/42.jpg",
+    time: "5 min ago",
+  },
+  {
+    name: "George Smith",
+    username: "georgesmith",
+    content: "Just finished a big project at work. Proud of my team! 🚀",
+    avatar: "https://randomuser.me/api/portraits/men/6.jpg",
+    time: "20 min ago",
+  },
+  {
+    name: "Taylor Kim",
+    username: "taylork",
+    content: "Exploring the new features on SocialConnect. Anyone up for a chat?",
+    time: "1 hr ago",
+  },
+];
+
+export default function Index() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <>
+      <Navbar />
+      <main className="container max-w-3xl mx-auto pt-9 px-6">
+        <h2 className="text-3xl font-extrabold mb-8 text-blue-700 animate-fade-in">
+          Welcome to SocialConnect!
+        </h2>
+        {DUMMY_POSTS.map((post, idx) => (
+          <PostCard key={idx} {...post} />
+        ))}
+      </main>
+    </>
   );
-};
-
-export default Index;
+}
