@@ -1,73 +1,137 @@
-# Welcome to your Lovable project
+📄 README for mern_social_app
 
-## Project info
+# mern_social_app
 
-**URL**: https://lovable.dev/projects/5fc218e6-f6b1-4208-8f04-e979486b128a
+A full-stack **social networking web application** built with the **MERN stack (MongoDB, Express.js, React, Node.js)** and enhanced with **AI-powered features via ChatGPT**.  
+This app allows users to connect, share posts, interact with others, and explore an intelligent social feed.
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 🚀 Features
 
-**Use Lovable**
+- 🔐 **Authentication & Authorization** – Secure login and registration using JWT & bcrypt.
+- 👤 **User Profiles** – Customizable profile pages with bio, avatar, and personal details.
+- 📝 **Posts & Feeds** – Create, edit, delete, and like posts in a dynamic feed.
+- 💬 **Comments & Engagement** – Comment on posts and engage with others in real time.
+- 📷 **Media Uploads** – Upload and display images via Cloudinary integration.
+- 🤖 **AI-Powered Assistance** – ChatGPT integrated for smart replies, post suggestions, and content enhancement.
+- 🔔 **Notifications** – Stay updated on likes, comments, and new followers.
+- 📱 **Responsive Design** – Built with **Material UI** for a clean, modern look.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/5fc218e6-f6b1-4208-8f04-e979486b128a) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🛠️ Tech Stack
 
-**Use your preferred IDE**
+### Frontend
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- React (with hooks & context)
+- Tailwind css
+- Axios
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Backend
 
-Follow these steps:
+- Node.js
+- Express.js
+- MongoDB with Mongoose
+- JWT for authentication
+- bcrypt for password hashing
+- Cloudinary for image uploads
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### AI Integration
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+- OpenAI API (ChatGPT) for smart features
 
-# Step 3: Install the necessary dependencies.
-npm i
+---
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+## 📂 Project Structure
+
+mern_social_app/
+├── backend/ # Express + Node.js API
+│ ├── controllers/ # Business logic
+│ ├── models/ # MongoDB schemas
+│ ├── routes/ # API routes
+│ └── server.js
+│
+├── frontend/ # React app
+│ ├── src/
+│ │ ├── api/ # Axios API calls
+│ │ ├── auth/ # Auth context & hooks
+│ │ ├── components/ # Reusable components
+│ │ ├── pages/ # Page-level components
+│ │ ├── App.js
+│ │ └── index.js
+│ └── public/
+│
+└── README.md
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/ufuos/mern_social_app.git
+cd mern_social_app
+
+2. Install dependencies
+
+For backend:
+
+cd backend
+npm install
+
+
+For frontend:
+
+cd frontend
+npm install
+
+3. Setup environment variables
+
+Create .env files in both backend and frontend as needed:
+
+Backend (backend/.env)
+
+MONGO_URI=your-mongodb-uri
+JWT_SECRET=your-secret
+CLOUDINARY_URL=your-cloudinary-url
+OPENAI_API_KEY=your-openai-key
+
+
+Frontend (frontend/.env)
+
+REACT_APP_API_URL=http://localhost:5000
+
+4. Run the app
+
+In separate terminals:
+
+# Start backend
+cd backend
 npm run dev
+
+# Start frontend
+cd frontend
+npm start
+
+🤝 Contributing
+
+Pull requests are welcome! Please fork the repo and submit a PR.
+
+📜 License
+
+This project is licensed under the MIT License.
+
+👨‍💻 Author
+
+Built by Ufuoma Ogedegbe
+.
+
+
+---
+
+# 🔗 LinkedIn / Portfolio Description (Short)
+
+> **mern_social_app** – A full-stack social networking platform built with the **MERN stack** and **ChatGPT integration**. Features include authentication, user profiles, posts, comments, media uploads, and AI-powered content suggestions. Designed with **Tailwind css** for a modern, responsive experience.
 ```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/5fc218e6-f6b1-4208-8f04-e979486b128a) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
